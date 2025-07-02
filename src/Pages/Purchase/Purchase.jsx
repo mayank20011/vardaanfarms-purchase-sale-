@@ -4,8 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 const Purchase = () => {
   const [loading, setLoading] = useState(false);
-  const [fat, setFat] = useState();
-  const [clr, setClr] = useState();
+  const [fat, setFat] = useState('');
+  const [clr, setClr] = useState('');
   const [snf, setSnf] = useState(0);
 
   const calculateSNF = () => {
@@ -39,7 +39,7 @@ const Purchase = () => {
       console.log(payload);
       axios
         .post(
-          "https://script.google.com/a/macros/vardaanfarms.com/s/AKfycby2SLfUiE18UprM9Ms5SGjWTQSthCfxM6MXkjjcDg6kzXGrgaxlORf01r-1wUlNz6TV/exec",
+          "https://script.google.com/macros/s/AKfycbx0vw7aqq-1-a4mpJb_3f4Q-Afy3STCPboBRJWIA-InawEi7Rq0kMsGrr5m27BIoM0C/exec",
           payload
         )
         .then((res) => {
@@ -150,3 +150,10 @@ const Purchase = () => {
 };
 
 export default Purchase;
+
+
+// client id
+// 22478315826-dfl6a2d7dso7u4qkl2ni9ads7dk2k0pg.apps.googleusercontent.com
+
+// client secret
+// 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
